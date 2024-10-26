@@ -139,6 +139,80 @@ const Main = ()=> {
 const [link, setLink] = useState('')
 
     return (
+//         <div>
+//         <div>
+//         <div className="text-center text-3xl sm:text-4xl lg:text-5xl mb-8 lg:mb-12">
+//             Tech Stack
+//         </div>
+//         <div className="flex flex-wrap justify-center">
+//             {stack.map((stacks) => (
+//                 <div key={stacks.id} className="m-4 sm:mx-6">
+//                     <img
+//                         className="h-16 sm:h-20 bg-slate-800 hover:bg-orange-400 p-3 rounded-full"
+//                         src={stacks.img}
+//                         alt={stacks.name}
+//                     />
+//                     <p className="text-center text-sm sm:text-base mt-2">{stacks.name}</p>
+//                 </div>
+//             ))}
+//         </div>
+//     </div>
+
+//     {/* Projects Section */}
+//     <div className="text-center text-3xl sm:text-4xl lg:text-5xl my-12 lg:my-36">
+//         Projects
+//     </div>
+
+//     <div>
+//         {projects.map((project) => (
+//             <div
+//                 key={project.id}
+//                 className="bg-slate-900 rounded-2xl m-6 sm:m-10 lg:m-12 border-4 p-4 sm:p-6"
+//             >
+//                 <div>
+//                     <p className="text-2xl sm:text-3xl lg:text-4xl p-2 sm:p-4">{project.name}</p>
+//                     <p className="text-lg sm:text-xl p-2 sm:p-3">{project.title}</p>
+//                     <div className="flex flex-col lg:flex-row lg:space-x-6">
+//                         <img
+//                             className="h-48 sm:h-60 lg:h-72 m-4 sm:m-6 rounded-2xl border-slate-600 border-4"
+//                             src={project.img}
+//                             alt={project.name}
+//                         />
+//                         <ul className="text-sm sm:text-lg lg:text-2xl text-white mt-4 lg:mt-0">
+//                             {project.features && <li className="mb-2 lg:mb-4">{project.features}</li>}
+//                             {project.features2 && <li className="mb-2 lg:mb-4">{project.features2}</li>}
+//                             {project.features3 && <li className="mb-2 lg:mb-4">{project.features3}</li>}
+//                             {project.features4 && <li className="mb-2 lg:mb-4">{project.features4}</li>}
+//                         </ul>
+//                     </div>
+//                     <div className="flex flex-col items-center text-xl sm:text-2xl lg:text-3xl m-8 lg:m-16 space-y-3">
+//                         <a
+//                             href={project.link}
+//                             target="_blank"
+//                             className="flex items-center hover:underline"
+//                         >
+//                             <AiOutlineLink className="mr-2" />
+//                             {project.name}
+//                         </a>
+//                         <a
+//                             href={project.github}
+//                             target="_blank"
+//                             className="flex items-center hover:underline"
+//                         >
+//                             <AiFillGithub className="mr-2" />
+//                             Github link
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         ))}
+//     </div>
+// </div>
+
+
+
+
+
         <div>
         <div>
         <div className="text-center text-5xl mb-12">

@@ -18,6 +18,7 @@ const NavBar = ()=> {
            <div className="text-white text-3xl pl-8">
             Portfolio Website
            </div>
+           
             {/* <div className="">
             <ul className="flex flex-row  justify-center text-2xl text-white">
                 <li className="cursor-pointer ml-52 hover:text-indigo-400">
