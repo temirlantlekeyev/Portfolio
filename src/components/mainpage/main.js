@@ -215,10 +215,10 @@ const [link, setLink] = useState('')
 
         <div>
         <div>
-        <div className="text-center text-5xl mb-12">
+        <div className="flex justify-center text-center text-5xl mb-12">
             Tech Stack
         </div>
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center lg:flex flex-wrap my-20">
         {stack.map((stacks)=> {
             return (
         <div key={stacks.id} className="ml-8">
@@ -232,7 +232,56 @@ const [link, setLink] = useState('')
         <div>
         <div className=" m-10 mt-36 text-5xl flex flex-row justify-center ">Projects</div>
         
-        <div >
+
+        <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+    {projects.map((project) => (
+        <div key={project.id} className="bg-slate-900 rounded-2xl m-4 md:m-6 p-6 border-4">
+            <div>
+                {/* Project Title and Description */}
+                <p className="text-2xl sm:text-3xl lg:text-4xl p-4">{project.name}</p>
+                <p className="text-lg sm:text-xl p-3">{project.title}</p>
+                
+                {/* Image and Features Section */}
+                <div className="flex flex-col md:flex-row">
+                    <img 
+                        className="h-48 sm:h-60 md:h-72 lg:h-80 m-6 rounded-2xl border-slate-600 border-4" 
+                        src={project.img} 
+                        alt={`${project.name} preview`} 
+                    />
+                    
+                    <ul className="flex flex-col md:flex-row lg:flex-col m-4 text-lg sm:text-xl lg:text-2xl text-white">
+                        <li className="mb-4">{project.features}</li>
+                        <li className="mb-4">{project.features2}</li>
+                        <li className="mb-4">{project.features3}</li>
+                        <li className="mb-4">{project.features4}</li>
+                    </ul>
+                </div>
+                
+                {/* Links Section */}
+                <div className="flex flex-col items-center text-lg sm:text-xl lg:text-3xl mt-8">
+                    <a 
+                        href={project.link} 
+                        target="_blank" 
+                        className="flex flex-row items-center mb-3 hover:underline"
+                    >
+                        <AiOutlineLink className="mr-2" />
+                        {project.name}
+                    </a>
+                    <a 
+                        href={project.github} 
+                        target="_blank" 
+                        className="flex flex-row items-center hover:underline"
+                    >
+                        <AiFillGithub className="mr-2" />
+                        Github link
+                    </a>
+                </div>
+            </div>
+        </div>
+    ))}
+</div>
+
+        {/* <div className="lg:w-full max-w-screen">
         {projects.map((project)=> {
             return (
             <div key={project.id} className=" bg-slate-900 rounded-2xl m-12 border-4 p-6">
@@ -242,7 +291,7 @@ const [link, setLink] = useState('')
                     <div className="flex flex-row">
                     <img className="h-72 m-6 rounded-2xl border-slate-600 border-4" src={project.img}/>
                    
-                    <ul className="m-4 text-2xl text-white">
+                    <ul className="flex lg:flex-col  m-4 text-2xl text-white">
                         <li className="mb-4">
                         {project.features}
                         </li>
@@ -265,7 +314,7 @@ const [link, setLink] = useState('')
 
             </div>
         )})}
-        </div>
+        </div> */}
         </div>
         </div>
     )

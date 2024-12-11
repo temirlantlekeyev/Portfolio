@@ -19,10 +19,12 @@ const Header = ()=> {
                     </a>
                 </div>
             </div>
+
+            
     
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative mt-12 lg:mt-0">
                 <div className="relative">
-                    <img className="absolute h-48 md:h-64 lg:h-full -top-10 z-0 pt-24" src={yellow2} alt="Background Decoration"/>
+                    {/* <img className="absolute h-48 md:h-64 lg:h-full top-10 z-0 pt-24" src={yellow2} alt="Background Decoration"/> */}
                     <img className="relative z-10 w-48 md:w-64 lg:w-80 ml-16 mt-10 lg:mt-0" src={photo3} alt="Profile Photo"/>
                 </div>
             </div>
