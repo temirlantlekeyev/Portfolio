@@ -233,15 +233,15 @@ const [link, setLink] = useState('')
         <div className=" m-10 mt-36 text-5xl flex flex-row justify-center ">Projects</div>
         
 
-        <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+        {/* <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
     {projects.map((project) => (
         <div key={project.id} className="bg-slate-900 rounded-2xl m-4 md:m-6 p-6 border-4">
             <div>
-                {/* Project Title and Description */}
+         
                 <p className="text-2xl sm:text-3xl lg:text-4xl p-4">{project.name}</p>
                 <p className="text-lg sm:text-xl p-3">{project.title}</p>
                 
-                {/* Image and Features Section */}
+             
                 <div className="flex flex-col md:flex-row">
                     <img 
                         className="h-48 sm:h-60 md:h-72 lg:h-80 m-6 rounded-2xl border-slate-600 border-4" 
@@ -257,7 +257,7 @@ const [link, setLink] = useState('')
                     </ul>
                 </div>
                 
-                {/* Links Section */}
+               
                 <div className="flex flex-col items-center text-lg sm:text-xl lg:text-3xl mt-8">
                     <a 
                         href={project.link} 
@@ -279,7 +279,65 @@ const [link, setLink] = useState('')
             </div>
         </div>
     ))}
+</div> */}
+
+<div className="w-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 ">
+    {projects.map((project) => {
+        return (
+            <div
+                key={project.id}
+                className="bg-slate-900 rounded-2xl m-6 sm:m-8 lg:m-12 border-4 p-6"
+            >
+                {/* Project Header */}
+                <div>
+                    <p className="text-2xl sm:text-3xl lg:text-4xl p-4">{project.name}</p>
+                    <p className="text-lg sm:text-xl lg:text-2xl p-3">{project.title}</p>
+                </div>
+
+                {/* Project Details */}
+                <div className="flex flex-col lg:flex-row">
+                    {/* Image Section */}
+                    <img
+                        className="h-48 sm:h-64 lg:h-72 m-4 sm:m-6 rounded-2xl border-slate-600 border-4"
+                        src={project.img}
+                        alt={project.name}
+                    />
+
+                    {/* Features List */}
+                    <ul className="ml-0 lg:ml-8 mt-6 lg:mt-0 text-sm lg:text-lg space-y-2 ">
+                        <li className="mb-4">{project.features}</li>
+                        <li className="mb-4">{project.features2}</li>
+                        <li className="mb-4">{project.features3}</li>
+                        <li className="mb-4">{project.features4}</li>
+                    </ul>
+                </div>
+
+                {/* Links Section */}
+                <div className="flex flex-col items-center text-xl sm:text-2xl lg:text-3xl m-8 sm:m-12 lg:m-16 space-y-4">
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-row items-center hover:underline"
+                    >
+                        <AiOutlineLink />
+                        <span className="ml-2">{project.name}</span>
+                    </a>
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-row items-center hover:underline"
+                    >
+                        <AiFillGithub />
+                        <span className="ml-2">Github link</span>
+                    </a>
+                </div>
+            </div>
+        );
+    })}
 </div>
+
 
         {/* <div className="lg:w-full max-w-screen">
         {projects.map((project)=> {
