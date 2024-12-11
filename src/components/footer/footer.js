@@ -69,7 +69,7 @@ const Footer = ()=> {
         </div>
 
         {/* Navigation Section */}
-        <div className="flex flex-col items-center lg:mt-0 lg:mx-20 text-center text-2xl">
+        <div className="flex flex-col items-center lg:mt-0 lg:mx-20 text-center text-2xl pt-16">
             <div
                 className="cursor-pointer mb-5 hover:text-indigo-400"
                 onClick={scroll}
@@ -91,7 +91,7 @@ const Footer = ()=> {
         </div>
 
         {/* Links Section */}
-        <div className="flex flex-col items-center lg:items-end mt-8 lg:mt-0 text-2xl">
+        <div className="flex flex-col items-center lg:items-end mt-8 lg:mt-0 text-2xl pt-16">
             {links.map((link) => (
                 <div key={link.id} className="mb-3">
                     <a
